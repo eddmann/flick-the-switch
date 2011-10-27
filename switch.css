@@ -1,0 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Francois+One);
+body,html,div,img,label,p,h1,h2,h3,h4,ul,ol,li,form,a,th,td{border:0;outline:none;margin:0;padding:0}
+ul,ol{list-style:none}
+img{border:0}
+a{text-decoration:none;color:#ffffff}
+.clear{content:".";display:block;height:0;clear:both;visibility:hidden}
+body{background:url("bg.png");font-size:14px}
+#container{width:700px;margin:40px auto;text-align:center;}
+#container h1{font-family:"Francois One",sans-serif;font-size:70px;text-shadow:2px 8px #b5c1b8,-1px -1px #fff;color:#fff}
+#container .colour{width:250px;height:250px;display:block;float:left;margin-top:50px;box-shadow:2px 2px 5px #888}
+#container #new,#container #original{background-color:#191919}
+#container #original{margin-left:100px}
+#container #controls{margin-top:50px;}
+#container #controls #slider{margin:40px 0 0 100px;width:500px}
+#container #controls input[type="text"]{width:145px;font-size:30px;margin:5px 0;padding:8px 10px;outline:none;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:1px solid #eee;color:#a9a9a9;float:left;}
+#container #controls input[type="text"]:first-child{margin:0 80px 0 150px}
+#container #controls input[type="text"]:focus{-moz-box-shadow:0 3px 3px 0 rgba(0,171,250,0.60),0 0 3px 3px rgba(0,171,250,0.30);box-shadow:0 3px 3px 0 rgba(0,171,250,0.60),0 0 3px 3px rgba(0,171,250,0.30)}
+#container #controls input[type="range"]{margin-top:40px;width:400px}
