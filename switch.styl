@@ -1,5 +1,6 @@
 @css {
   @import url(http://fonts.googleapis.com/css?family=Francois+One);
+  @import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
   body,html,div,img,label,p,h1,h2,h3,h4,ul,ol,li,form,a,th,td{border:0;outline:none;margin:0;padding:0}
   ul,ol{list-style:none}
   img{border:0}
@@ -7,9 +8,17 @@
   .clear{content:".";display:block;height:0;clear:both;visibility:hidden}
 }
 
+.left
+  float: left
+  text-align: right 
+
+.right
+  float: right
+  text-align: left
+
 body
-  background: url(bg.png)
-  font-size: 14px;
+  background: url(assets/bg.png)
+  font: 14px Arial, Helvetica, 'Helvetica Neue', Verdana, sans-serif
 
 #container
   width: 700px
@@ -28,7 +37,6 @@ body
     display: block
     float: left
     margin-top: 50px
-    box-shadow: 2px 2px 5px #888888
 
   #new, #original
     background-color: #191919
@@ -54,7 +62,7 @@ body
       border-radius: 5px;
       border: 1px solid #EEEEEE
       color: #A9A9A9
-      float: left
+      text-align: center
       &:first-child
         margin: 0 80px 0 150px
       &:focus
@@ -64,3 +72,31 @@ body
     input[type="range"]
       margin-top: 40px
       width: 400px
+
+    #original-value
+      float: left
+
+    #new-value
+      float: right
+
+.hw
+  font-family: 'Gloria Hallelujah', cursive
+  font-size: 20px
+  width: 100px
+  margin: 10px 20px 0 20px;
+
+#light-to-dark
+  margin: 0px 0 0 100px
+  height: 5px
+  width: 500px 
+  background-image: linear-gradient(left , #000000 0%, #FFFFFF 60%)
+  background-image: -o-linear-gradient(left , #000000 0%, #FFFFFF 60%)
+  background-image: -moz-linear-gradient(left , #000000 0%, #FFFFFF 60%)
+  background-image: -webkit-linear-gradient(left , #000000 0%, #FFFFFF 60%)
+  background-image: -ms-linear-gradient(left , #000000 0%, #FFFFFF 60%)
+
+footer
+  text-align: center
+  margin-top: 50px
+  font-weight: bold
+  color: #A2A2A2

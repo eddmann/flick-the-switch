@@ -104,16 +104,21 @@ $(function () {
 
   originalVal.change(function () {
     var hex = originalVal.val();
+    
+    if (hex[0] !== '#')
+      hex = '#' + hex;
 
-    if (hex.match(/^#?[a-z0-9]{6}$/i)) {
+    if (hex.match(/^#[a-z0-9]{6}$/i)) {
       flick.setColour(hex);
+      originalVal.val(hex);
       originalBox.css('background-color', hex);
       newBox.css('background-color', hex);
       newVal.val(hex);
       sliderBar.slider('option', 'value', 0);
     } else {
-      originalVal.effect('shake', { }, 100, function () {
+      originalVal.animate({ backgroundColor: 'red' }, 300, function () {
         originalVal.val('');
+        originalVal.animate({ backgroundColor: 'white' }, 300);
       });
     }
   });
@@ -129,8 +134,17 @@ $(function () {
       newBox.css('background-color', hex);
     }
   });
+  
+  newVal.zclip({
+    path: 'assets/ZeroClipboard.swf',
+    copy: $('#new-value').val(),
+    beforeCopy: function () {
+      $(this).animate({ backgroundColor: 'yellow' }, 300);
+    },
+    afterCopy: function () {
+      $(this).animate({ backgroundColor: 'white' }, 300);
+    }
+  });
 
-  newVal.click(function () { newVal.select(); });
   originalVal.click(function () { originalVal.select(); });
-
 });
